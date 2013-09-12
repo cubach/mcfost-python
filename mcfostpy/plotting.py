@@ -73,7 +73,7 @@ def plot_seds(parfilename=None,dir="./", overplot=False, nlabels=None, alpha=0.7
                 label=None
             plt.loglog(lambd, flux, color=((ninc-inc)*1.0/ninc, 0, 0), label=label, alpha=alpha)
     else:
-        wmin = np.argmin( abs(par.im_inclinations] - inclination))
+        wmin = np.argmin( abs(par.im_inclinations) - inclination)
         print "Closest inclination found to %f is %f. " % (inclination, par.im_inclinations[wmin])
         label = "%4.1f$^o$" % (par.im_inclinations[wmin])
         flux = sed[0,phi-1,wmin,:]
